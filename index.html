@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(245, 245, 220, 0.167);
+        }
+        img {
+            height: 500px;
+        }
+        .container {
+            height: 700px;
+            width: 500px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 12px;
+            margin: 10px;
+            color: white;
+            font-size: 18px;
+        }
+        .btn .left button {
+            background-color: green;
+        }
+        .btn .left button:hover {
+            background-color: rgb(40, 237, 40);
+        }
+        .btn .right button {
+            background-color: red;
+        }
+        .btn .right button:hover {
+            background-color: rgba(248, 36, 36, 0.74);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="leftImg">
+                <img id="fanImage" src="images/on fan.gif" alt="fan">
+            </div>
+        </div>
+        <div class="right">
+            <div class="btn">
+                <div class="left">
+                    <button id="leftBtn">Switch off</button>
+                </div>
+                <div class="right">
+                    <button id="rightBtn">Switch on</button>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <script>
+        let leftBtn = document.getElementById("leftBtn");
+        leftBtn.addEventListener("click", function() {
+            let fanImage = document.getElementById("fanImage");
+            fanImage.src = "../hnt/images/offan.jpeg"; // Ensure this path is correct
+        });
+
+        let rightBtn = document.getElementById("rightBtn");
+        rightBtn.addEventListener("click", function() {
+            let fanImage = document.getElementById("fanImage");
+            fanImage.src = "../hnt/images/on fan.gif"; // Ensure this path is correct
+        });
+    </script>
+</body>
+</html>
